@@ -2,12 +2,13 @@ import { Radio } from "lucide-react";
 import Image from "next/image";
 import logo from "../../assets/logo.svg";
 import { SubscriptionForm } from "./subscription-form";
+import { Suspense } from "react";
 
 export default function Home() {
 	return (
 		<div className="min-h-dvh flex flex-col justify-center gap-16">
 			<div className="flex flex-col gap-8 items-center md:items-start">
-				<Image src={logo} alt="devstage" width={108.5} heigth={30} />
+				<Image src={logo} alt="devstage" width={108.5} height={30} />
 
 				<h1 className="text-4xl text-center leading-none font-heading font-medium flex flex-col md:text-7xl md:text-left">
 					<span className="text-blue"> CodeCraft </span>
@@ -37,7 +38,9 @@ export default function Home() {
 						Dias 15 a 17 de março | Das 18h às 21h | Online & Gratuito
 					</p>
 				</div>
-				<SubscriptionForm/>
+				<Suspense fallback={<div>Carregando...</div>}>
+					<SubscriptionForm />
+				</Suspense>
 			</div>
 		</div>
 	);

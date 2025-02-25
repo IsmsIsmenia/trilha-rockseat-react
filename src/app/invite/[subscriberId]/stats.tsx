@@ -1,4 +1,4 @@
-import { getGetSubscribersSubscriberIdRankingClicksUrl, getGetSubscribersSubscriberIdRankingCountUrl, getSubscribersSubscriberIdRankingClicks, getSubscribersSubscriberIdRankingCount, getSubscribersSubscriberIdRankingPosition } from "@/http/api";
+import { getSubscribersSubscriberIdRankingClicks, getSubscribersSubscriberIdRankingCount, getSubscribersSubscriberIdRankingPosition } from "@/http/api";
 import { BadgeCheck, Medal, MousePointerClick } from "lucide-react";
 
 interface StatsProps{
